@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: paulo960/corretor # Seu usuário e repositório no GitHub
+  name: git-gateway
   branch: main
 
 # Onde as imagens que você subir pelo painel serão salvas
