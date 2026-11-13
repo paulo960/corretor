@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título e descrição (SEO / compartilhamento) -->
+  <title>Nome do Corretor | Lançamentos em Goiânia</title>
+  <meta name="description" content="Corretor de imóveis de lançamentos em Goiânia. Fale no WhatsApp, conheça os imóveis e entre na comunidade de pré-lançamentos." />
+
+  <!-- Cor da barra do navegador no mobile -->
+  <meta name="theme-color" content="#101411" />
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nome do Corretor | Lançamentos em Goiânia" />
+  <meta property="og:description" content="Lançamentos em Goiânia: fale no WhatsApp e conheça os imóveis." />
+  <meta property="og:url" content="https://seu-usuario.github.io/links/" />
+  <meta property="og:image" content="https://seu-usuario.github.io/links/foto.jpg" />
+
+  <!-- Favicon em emoji (SVG inline) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏢</text></svg>" />
+
+  <!-- Fonte Sora (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Container principal (coluna única, mobile-first) -->
+  <main class="container">
+
+    <!-- Cabeçalho do perfil (preenchido via JS) -->
+    <header class="perfil" id="perfil">
+      <img class="perfil__foto" id="perfil-foto" alt="Foto de perfil" />
+      <h1 class="perfil__nome" id="perfil-nome"></h1>
+      <p class="perfil__subtitulo" id="perfil-subtitulo"></p>
+    </header>
+
+    <!-- Mensagem de carregamento -->
+    <p class="status" id="status-carregando">Carregando links…</p>
+
+    <!-- Mensagem de erro (escondida por padrão) -->
+    <div class="erro" id="status-erro" hidden>
+      <p>Não foi possível carregar os links agora.</p>
+      <a class="botao botao--destaque" href="https://wa.me/5562999999999" target="_blank" rel="noopener noreferrer">
+        Falar no WhatsApp
+      </a>
+    </div>
+
+    <!-- Lista de botões (preenchida via JS) -->
+    <nav class="links" id="lista-links" aria-label="Links úteis"></nav>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <p>© <span id="ano"></span> — Todos os direitos reservados</p>
+    </footer>
+  </main>
+
+  <!-- JS do projeto -->
+  <script src="./script.js" defer></script>
+</body>
+</html>

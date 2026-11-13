@@ -1,0 +1,194 @@
+/* =========================================================
+   VARIÁVEIS GLOBAIS (cores, espaçamentos, tipografia)
+   Altere aqui para mudar o visual do site inteiro.
+   ========================================================= */
+:root {
+  /* Cores do tema */
+  --fundo:            #101411;
+  --card:             #181D19;
+  --borda:            #2A3128;
+  --texto:            #ECEFE8;
+  --texto-secundario: #9AA396;
+  --destaque:         #A6D63F;
+  --destaque-texto:   #0E120E;
+
+  /* Tipografia */
+  --fonte: 'Sora', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  /* Layout */
+  --largura-max: 480px;
+  --raio:        14px;
+  --espaco:      16px;
+}
+
+/* =========================================================
+   RESET SIMPLES
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--fonte);
+  background-color: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: var(--espaco);
+}
+
+/* =========================================================
+   CONTAINER PRINCIPAL (coluna única centralizada)
+   ========================================================= */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* =========================================================
+   PERFIL (foto, nome e subtítulo)
+   ========================================================= */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.perfil__foto {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--card);
+  border: 2px solid var(--borda);
+}
+
+.perfil__nome {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.perfil__subtitulo {
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+  max-width: 320px;
+}
+
+/* =========================================================
+   LISTA DE LINKS (botões)
+   ========================================================= */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botão base: usada tanto nos links quanto no botão de erro */
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;              /* acessibilidade: alvo de toque */
+  padding: 12px 16px;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  background-color: var(--card);
+  color: var(--texto);
+  font-family: var(--fonte);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.botao:hover {
+  border-color: var(--destaque);
+}
+
+.botao:active {
+  transform: scale(0.98);
+}
+
+/* Foco visível no teclado (importante para acessibilidade) */
+.botao:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 2px;
+}
+
+/* Botão em destaque (verde-limão preenchido) */
+.botao--destaque {
+  background-color: var(--destaque);
+  color: var(--destaque-texto);
+  border-color: var(--destaque);
+}
+
+.botao--destaque:hover {
+  background-color: #b6e64b;
+  border-color: #b6e64b;
+}
+
+/* =========================================================
+   MENSAGENS DE STATUS (carregando e erro)
+   ========================================================= */
+.status {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.erro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+.erro[hidden] {
+  display: none;
+}
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+.rodape {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: var(--texto-secundario);
+  text-align: center;
+  padding-top: 16px;
+}
+
+/* =========================================================
+   RESPEITA PREFERÊNCIA DE MENOS ANIMAÇÃO
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .botao {
+    transition: none;
+  }
+}
