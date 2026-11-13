@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: paulo960/corretor # Seu usuário e repositório no GitHub
+  branch: main
+
+# Onde as imagens que você subir pelo painel serão salvas
+media_folder: "images"
+public_folder: "/images"
+
+locale: 'pt' # Deixa o painel em português
+
+collections:
+  - name: "perfil_e_links"
+    label: "Página de Links"
+    files:
+      - name: "dados"
+        label: "Configurações e Links"
+        file: "links.json" # O arquivo que o painel vai editar
+        fields:
+          # --- SEÇÃO DO PERFIL ---
+          - {label: "Nome", name: "nome", widget: "string", required: false}
+          - {label: "Subtítulo", name: "subtitulo", widget: "string", required: false}
+          - {label: "Foto de Perfil", name: "foto", widget: "image", required: false}
+          
+          # --- SEÇÃO DOS LINKS ---
+          - label: "Links"
+            name: "links"
+            widget: "list" # Permite adicionar, remover e reordenar links
+            fields:
+              - {label: "ID (número único)", name: "id", widget: "number", value_type: "int"}
+              - {label: "Título do Botão", name: "titulo", widget: "string"}
+              - {label: "URL de Destino", name: "url", widget: "string"}
+              - {label: "Ativo?", name: "ativo", widget: "boolean", default: true}
+              - {label: "Destacar (verde)?", name: "destaque", widget: "boolean", default: false}
+              - {label: "Data de Expiração (opcional)", name: "expira_em", widget: "datetime", required: false, format: "YYYY-MM-DDTHH:mm:ssZ"}

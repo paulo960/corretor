@@ -66,8 +66,11 @@ async function carregarDados() {
     if (!resposta.ok) throw new Error("Falha ao buscar links.json");
 
     const dados = await resposta.json();
-    renderizarPerfil(dados.perfil);
+    
+    // O JSON agora tem os dados do perfil soltos (na raiz do arquivo)
+    renderizarPerfil(dados); 
     renderizarLinks(dados.links);
+    
     esconderCarregando();
   } catch (erro) {
     console.error("Erro ao carregar dados:", erro);

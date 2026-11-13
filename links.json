@@ -1,47 +1,21 @@
 {
-  "perfil": {
-    "nome": "Seu Nome",
-    "subtitulo": "Corretor de lançamentos em Goiânia • CRECI 00000",
-    "foto": ""
-  },
+  "nome": "Seu Nome",
+  "subtitulo": "Corretor de lançamentos em Goiânia • CRECI 00000",
+  "foto": "",
   "links": [
     {
       "id": 1,
       "titulo": "Falar no WhatsApp",
-      "url": "https://wa.me/5562999999999?text=Ol%C3%A1%21%20Vi%20seu%20link%20na%20bio%20e%20quero%20saber%20mais%20sobre%20os%20lan%C3%A7amentos%20em%20Goi%C3%A2nia.",
+      "url": "https://wa.me/5562999999999?text=Ol%C3%A1%21",
       "ativo": true,
       "destaque": true,
       "expira_em": null
     },
     {
       "id": 2,
-      "titulo": "Imóvel 1 — a partir de R$ 350 mil",
-      "url": "https://wa.me/5562999999999?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20Im%C3%B3vel%201%20%28a%20partir%20de%20R%24%20350%20mil%29.",
+      "titulo": "Instagram",
+      "url": "https://instagram.com/seu_usuario",
       "ativo": true,
-      "destaque": false,
-      "expira_em": null
-    },
-    {
-      "id": 3,
-      "titulo": "Imóvel 2 — a partir de R$ 500 mil",
-      "url": "https://wa.me/5562999999999?text=Ol%C3%A1%21%20Quero%20saber%20mais%20sobre%20o%20Im%C3%B3vel%202%20%28a%20partir%20de%20R%24%20500%20mil%29.",
-      "ativo": true,
-      "destaque": false,
-      "expira_em": null
-    },
-    {
-      "id": 4,
-      "titulo": "Comunidade de pré-lançamentos",
-      "url": "https://chat.whatsapp.com/SEU_CODIGO_DO_GRUPO",
-      "ativo": true,
-      "destaque": false,
-      "expira_em": null
-    },
-    {
-      "id": 5,
-      "titulo": "Promoção encerrada",
-      "url": "https://wa.me/5562999999999?text=Promo%C3%A7%C3%A3o%20encerrada",
-      "ativo": false,
       "destaque": false,
       "expira_em": null
     }
